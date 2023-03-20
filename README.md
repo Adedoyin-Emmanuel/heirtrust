@@ -8,7 +8,7 @@
 | Task | Status | Implemented |
 | ---- | ------ | ----------- |
 | Update README.md File | [ done ] | [ yes ] |
-| Setup App Pages | [ not done] | [yes ] |
+| Setup App Pages | [ in progress ] | [no ] |
 | Setup App Assets, Fonts, Images, etc | [ in progress ] | [almost ] |
 | Setup App Include Files | [not done] | [no ] |
 | Setup App Components | [not done] | [yes ] |
