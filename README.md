@@ -11,7 +11,7 @@
 | Setup App Pages | [ in progress ] | [no ] |
 | Setup App Assets, Fonts, Images, etc | [ in progress ] | [almost ] |
 | Setup App Include Files | [not done] | [no ] |
-| Setup App Components | [not done] | [yes ] |
+| Setup App Components | [done ] | [yes ] |
 | Setup Application Routing | [not done ] | [ no ] |
 | Frontend Development / Design | [not done] | [ no ] |
 | Waitlist Development| [ not done] | [ no ] |
