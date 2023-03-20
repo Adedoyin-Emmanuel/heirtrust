@@ -9,6 +9,7 @@
 | ---- | ------ | ----------- |
 | Update README.md File | [ done ] | [ yes ] |
 | Setup App Pages | [ not done] | [yes ] |
+| Setup App Assets, Fonts, Images, etc | [ in progress ] | [almost ] |
 | Setup App Include Files | [not done] | [no ] |
 | Setup App Components | [not done] | [yes ] |
 | Setup Application Routing | [not done ] | [ no ] |
