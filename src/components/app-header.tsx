@@ -2,7 +2,12 @@ import React from 'react'
 import AppBlueLogo from "./../assets/images/logo-blue.svg";
 import AppButton from './app-button';
 
-const AppHeader = ():JSX.Element =>
+
+interface appHeaderProps
+{
+    className: string;
+}
+const AppHeader = ({className}: appHeaderProps):JSX.Element =>
 {
 
     const handleButtonClick = ():void =>
@@ -11,7 +16,7 @@ const AppHeader = ():JSX.Element =>
     }
     return (
         <React.Fragment>
-            <section className="container-fluid d-flex align-items-center justify-content-between brand-white-color">
+            <section className={`container-fluid d-flex align-items-center justify-content-between ${className}`}>
                 <section className="app-logo-container my-2 d-flex align-items-center justify-content-center">
                 <img src={AppBlueLogo} className="img-fluid" width={"80"} height={"80"} alt="HeirTrust Logo"/>
                 </section>

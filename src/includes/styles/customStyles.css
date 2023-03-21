@@ -34,6 +34,9 @@
     --brand-small-text:0.9rem;
 }
 
+
+/*app utility color classes*/
+
 .brand-bg-primary-blue
 {
     background: var(--brand-primary-blue-color);
@@ -92,4 +95,24 @@
 .brand-button-outline-green
 {
     border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
+}
+
+
+
+
+/*app hero*/
+.hero-wave
+{
+    z-index:0;
+}
+
+.hero-image-container
+{
+    z-index:10000;
+}
+
+
+.hero-image
+{
+    z-index:10000;
 }

@@ -6,7 +6,7 @@ const NotFound = ():JSX.Element =>
     return (
         <React.Fragment>
             <section className="container-fluid">
-                <AppHeader />
+                <AppHeader className="brand-bg-white"/>
                 
                 you are lost
             </section>
