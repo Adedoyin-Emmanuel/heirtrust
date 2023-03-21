@@ -24,3 +24,5 @@ const AppHeader = ():JSX.Element =>
         </React.Fragment>
     )
 }
+
+export default AppHeader;
