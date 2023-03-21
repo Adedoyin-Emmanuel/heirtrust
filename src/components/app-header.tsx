@@ -11,7 +11,7 @@ const AppHeader = ():JSX.Element =>
     }
     return (
         <React.Fragment>
-            <section className="container-fluid">
+            <section className="container-fluid d-flex">
                 <section className="app-logo-container">
                     <img src={AppBlueLogo} className="img-fluid"/>
                 </section>
