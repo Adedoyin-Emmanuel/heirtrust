@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./pages/404";
+import "./autoload";
 const App = (): JSX.Element =>
 {
   return (
