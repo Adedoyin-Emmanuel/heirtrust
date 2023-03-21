@@ -11,7 +11,7 @@ const AppButton = ({text, className, onClick}: appButtonProps):JSX.Element =>
 {
     return (
         <React.Fragment>
-            <button className={`app-button ${className}`} onClick={onClick}>{text}</button>
+            <button className={`brand-button ${className}`} onClick={onClick}>{text}</button>
         </React.Fragment>
     );
 }

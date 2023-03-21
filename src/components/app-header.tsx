@@ -11,14 +11,14 @@ const AppHeader = ():JSX.Element =>
     }
     return (
         <React.Fragment>
-            <section className="container-fluid d-flex">
-                <section className="app-logo-container">
-                    <img src={AppBlueLogo} className="img-fluid"/>
+            <section className="container-fluid d-flex align-items-center justify-content-between brand-bg-primary-blue">
+                <section className="app-logo-container my-2 d-flex align-items-center justify-content-center">
+                <img src={AppBlueLogo} className="img-fluid" width={"80"} height={"80"}/>
                 </section>
                 
                 
-                <section className="connect-wallet-button">
-                    <AppButton className="text-capitalize text-center" text="connect wallet" onClick={handleButtonClick}></AppButton>
+                <section className="connect-wallet-button my-2 d-flex align-items-center justify-content-center">
+                    <AppButton className="text-capitalize text-center brand-small-text-2 p-2 brand-button-outline-green" text="connect wallet" onClick={handleButtonClick}></AppButton>
                 </section>
             </section>
         </React.Fragment>

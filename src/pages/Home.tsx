@@ -5,7 +5,7 @@ const Home = ():JSX.Element =>
 {
     return (
         <React.Fragment>
-            <section className="container-fluid">
+            <section className="container-fluid p-0">
                 <AppHeader />
             </section>
         </React.Fragment>

@@ -31,7 +31,7 @@
     --brand-white-color:#ffffff;
     --brand-button-border-radius: 10px;
     --brand-button-outline-weight:2px;
-    
+    --brand-small-text:0.9rem;
 }
 
 .brand-bg-primary-blue
@@ -71,4 +71,25 @@
     background: var(--brand-white-color);
 }
 
+.brand-button
+{
+    border:none;
+    outline:none;
+    border-radius:calc(var(--brand-button-border-radius) - 6px);
+    color:var(--brand-secondary-green-color);
+    
+}
 
+.brand-small-text
+{
+    font-size:var(--brand-small-text);
+}
+
+.brand-small-text-2
+{
+    font-size:calc(var(--brand-small-text) - 0.1rem);
+}
+.brand-button-outline-green
+{
+    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
+}
