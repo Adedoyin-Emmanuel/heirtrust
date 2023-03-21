@@ -11,9 +11,9 @@ const AppHeader = ():JSX.Element =>
     }
     return (
         <React.Fragment>
-            <section className="container-fluid d-flex align-items-center justify-content-between brand-bg-primary-blue">
+            <section className="container-fluid d-flex align-items-center justify-content-between brand-white-color">
                 <section className="app-logo-container my-2 d-flex align-items-center justify-content-center">
-                <img src={AppBlueLogo} className="img-fluid" width={"80"} height={"80"}/>
+                <img src={AppBlueLogo} className="img-fluid" width={"80"} height={"80"} alt="HeirTrust Logo"/>
                 </section>
                 
                 

@@ -1,5 +1,6 @@
 import React from 'react';
 import AppHeader from '../components/app-header';
+import AppHero from '../components/app-hero';
 
 const Home = ():JSX.Element =>
 {
@@ -7,6 +8,7 @@ const Home = ():JSX.Element =>
         <React.Fragment>
             <section className="container-fluid p-0">
                 <AppHeader />
+                <AppHero/>
             </section>
         </React.Fragment>
     );
