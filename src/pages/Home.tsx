@@ -13,10 +13,10 @@ const Home = ():JSX.Element =>
                 <AppHeader className="brand-bg-white"/>
                 
                 <AppHero className=""/>
-                <section className="d-sm-block d-md-none my-4">
+                {/* <section className="d-sm-block my-4">
                       <AppHeroImageContainer className="hero-image-container-lg" />
-                </section> 
-                <section className="d-md-block my-3 d-lg-none d-none">
+                </section>  */}
+                <section className="d-sm-block my-4 d-lg-none">
                       <AppHeroImageContainer className="hero-image-container-lg" />
                 </section>  
                 <section className="d-lg-block d-xl-none d-none">
