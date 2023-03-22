@@ -12,7 +12,7 @@ const Home = ():JSX.Element =>
                 <AppHeader className="brand-bg-white"/>
                 
                 <AppHero className=""/>
-                <section className="d-md-none my-4">
+                <section className="d-sm-block d-md-none my-4">
                       <AppHeroImageContainer className="hero-image-container-lg" />
                 </section> 
                 <section className="d-md-block my-3 d-lg-none d-none">
@@ -30,6 +30,7 @@ const Home = ():JSX.Element =>
                 <section className="text-start px-2">
                     Lorem ipsum dolor sit  magnam totam incidunt ex deleniti minima dolorem, quo similique vero.  
                 </section>
+                
             </section>
         </React.Fragment>
     );
