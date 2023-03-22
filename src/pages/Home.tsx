@@ -1,9 +1,9 @@
 import React from 'react';
 import AppHeader from '../components/app-header';
 import AppHero from '../components/app-hero';
-import HeroWave from '../components/app-hero-wave';
 import AppHeroImageContainer from '../components/app-hero-image';
-
+import AppAbout
+from '../components/app-about-section';
 const Home = ():JSX.Element =>
 {
     return (
@@ -27,9 +27,7 @@ const Home = ():JSX.Element =>
                 <section className="d-xxl-block d-none">
                       <AppHeroImageContainer className="hero-image-container-xxl" />
                 </section>  
-                <section className="text-start px-2">
-                    Lorem ipsum dolor sit  magnam totam incidunt ex deleniti minima dolorem, quo similique vero.  
-                </section>
+                <AppAbout/>
                 
             </section>
         </React.Fragment>
