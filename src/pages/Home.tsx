@@ -2,8 +2,9 @@ import React from 'react';
 import AppHeader from '../components/app-header';
 import AppHero from '../components/app-hero';
 import AppHeroImageContainer from '../components/app-hero-image';
-import AppAbout
-from '../components/app-about-section';
+import AppAbout from '../components/app-about-section';
+import AppFooter from '../components/app-footer';
+
 const Home = ():JSX.Element =>
 {
     return (
@@ -27,8 +28,9 @@ const Home = ():JSX.Element =>
                 <section className="d-xxl-block d-none">
                       <AppHeroImageContainer className="hero-image-container-xxl" />
                 </section>  
-                <AppAbout/>
                 
+                <AppAbout/>
+                <AppFooter/>
             </section>
         </React.Fragment>
     );
