@@ -1,5 +1,5 @@
 import React from "react";
-
+import HeroImage from "./../assets/images/dashboard.svg";
 import HeroWave from "./app-hero-wave";
 
 interface appHeroProps {
@@ -22,8 +22,7 @@ const AppHero = ({ className }: appHeroProps): JSX.Element =>
             digital wealth transfer
           </p>
         </section>
-
-        <HeroWave className="hero-wave"/>
+        <HeroWave className=""/>
       </section>
     </React.Fragment>
   );

@@ -101,18 +101,28 @@
 
 
 /*app hero*/
-.hero-wave
+
+.hero-image-container-md
 {
-    z-index:0;
+   transform:translateY(-10%);
+   
 }
 
-.hero-image-container
+.hero-image-container-lg
 {
-    z-index:10000;
+   transform:translateY(-55%);
 }
 
+.hero-image-container-xl
+{
+   transform:translateY(-65%);
+}
 
+.hero-image-container-xxl
+{
+   transform:translateY(-75%);
+}
 .hero-image
 {
-    z-index:10000;
+   margin:auto;
 }
