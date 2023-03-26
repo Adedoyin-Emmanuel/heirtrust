@@ -136,8 +136,14 @@
 .header-join-waitlist-button
 {
     transition:var(--brand-join-waitlist-transition);
+    background:var(--brand-secondary-green-color);
+    color:var(--brand-white-color);
 }
 
+.header-join-waitlist-button:hover{
+    color:var(--brand-black-color);
+    background:var(--brand-white-color);
+}
 
 .about-join-waitlist-button
 {
@@ -153,10 +159,7 @@
     color:var(--brand-black-color);
 }
 
-.header-join-waitlist-button:hover{
-    background:var(--brand-secondary-green-color);
-    color:var(--brand-white-color);
-}
+
 
 /*app hero*/
 

@@ -10,10 +10,10 @@ const AppAbout = (): JSX.Element =>
     
   return (
     <React.Fragment>
-      <section className="app-about my-md-3 row">
+      <section className="app-about my-md-4 my-3 py-2 row">
         <section className="about-text col-lg-5 col-md-12 m-2 d-flex flex-column my-2 mx-2">
           {/* <p className="text-capitalize">ABOUT</p> */}
-          <h3 className="fs-3 text-capitalize fw-bold ">all you need to get started</h3>
+          <h3 className="fs-3 text-capitalize fw-bold my-3 py-2">all you need to get started</h3>
           
           
           <p className="brand-small-text-2 text-start my-3">
