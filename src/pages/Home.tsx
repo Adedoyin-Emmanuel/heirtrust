@@ -4,7 +4,7 @@ import AppHero from '../components/app-hero';
 import AppHeroImageContainer from '../components/app-hero-image';
 import AppAbout from '../components/app-about-section';
 import AppFooter from '../components/app-footer';
-
+import AppWaitlist from '../components/app-waitlist';
 const Home = ():JSX.Element =>
 {
     return (
@@ -30,6 +30,7 @@ const Home = ():JSX.Element =>
                 </section>  
                 
                 <AppAbout/>
+                <AppWaitlist/>
                 <AppFooter/>
             </section>
         </React.Fragment>
