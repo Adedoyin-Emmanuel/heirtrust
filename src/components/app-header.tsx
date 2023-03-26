@@ -23,7 +23,7 @@ const AppHeader = ({className}: appHeaderProps):JSX.Element =>
                 
                 
                 <section className="connect-wallet-button my-2 d-flex align-items-center justify-content-center">
-                    <AppButton className="text-capitalize text-center brand-small-text-2 p-2 brand-button-outline-green" text="connect wallet" onClick={handleButtonClick}></AppButton>
+                    <AppButton className="text-capitalize text-center brand-small-text-2 p-2 brand-button-outline-green" text="join waitlist" onClick={handleButtonClick}></AppButton>
                 </section>
             </section>
         </React.Fragment>
