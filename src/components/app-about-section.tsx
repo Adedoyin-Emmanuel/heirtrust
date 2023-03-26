@@ -28,24 +28,24 @@ const AppAbout = (): JSX.Element =>
         
         <section className="about-steps col-lg-7 col-md-12 row">
             <section className="about-step-1 col-md-6 d-flex flex-column align-items-start justify-content-center p-3 m-md-0 m-2">
-                <AppAboutProcess text="1" className=""/>
+                <AppAboutProcess text="1" className="app-about-process"/>
                 <p className="brand-small-text-2 my-2 m-0 py-3">Set up smart contracts that execute your wills automatically when certain conditions are met</p>
             </section>
             
             <section className="about-step-2 col-md-6 d-flex flex-column align-items-start justify-content-center p-3 m-md-0 m-2">
-              <AppAboutProcess text="2" className=""/>
+              <AppAboutProcess text="2" className="app-about-process"/>
             
                 <p className="brand-small-text-2 my-2 m-0 py-3">Encrypt your data and store it securely on decentralized storage networks like IPFS or Filecoin.</p>
             </section>
             
             <section className="about-step-3 col-md-6 d-flex flex-column align-items-start justify-content-center p-3 m-md-0 m-2">
-                <AppAboutProcess text="3" className=""/>
+                <AppAboutProcess text="3" className="app-about-process"/>
             
                 <p className="brand-small-text-2 my-2 m-0 py-3">Designate multiple beneficiaries for your assets and files and provide them with recovery methods such as passwords, biometrics or social proofs.</p>
             </section>
             
             <section className="about-step-4 col-md-6 d-flex flex-column align-items-start justify-content-center p-3 m-md-0 m-2">
-               <AppAboutProcess text="4" className=""/>
+               <AppAboutProcess text="4" className="app-about-process"/>
                 
                 <p className="brand-small-text-2 my-2 m-0 py-3">Enjoy peace of mind knowing that your digital wealth will be transferred to your loved ones according to your wishes.</p>
             </section>
