@@ -163,9 +163,13 @@
     height:25px;
     border: calc(var(--brand-button-outline-weight) - 1px) solid var(--brand-white-color);
     margin-right:10px;
+    transition:.5s;
 }
 
-
+.social-icon:hover{
+    cursor:pointer;
+    background:var(--brand-secondary-green-color)
+}
 
 
 /*custom responsiveness*/
