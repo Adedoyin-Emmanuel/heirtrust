@@ -20,7 +20,7 @@ const AppFooter = (): JSX.Element => {
           </section>
 
           <section className="app-footer-text-area ">
-            <p className="brand-small-text-3 text-light text-capitalize my-3">
+            <p className="brand-small-text-3 text-light text-capitalize my-3 p-1">
               To continue, Google will share your name, email address, language
               pictures with HeirTrust.
             </p>
