@@ -21,7 +21,7 @@ const AppAbout = (): JSX.Element =>
           </p>
           
           <section className="connect-button-container d-flex align-items-center my-2">
-            <AppButton text="connect wallet" className="brand-button brand-bg-primary-green text-light text-capitalize brand-small-text-2 p-2" onClick={handleClick}/>
+            <AppButton text="join waitlist" className="brand-button brand-bg-primary-green text-capitalize brand-small-text-2 p-2 about-join-waitlist-button" onClick={handleClick}/>
           </section>
         </section>
         

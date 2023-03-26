@@ -32,6 +32,8 @@
     --brand-button-border-radius: 10px;
     --brand-button-outline-weight:2px;
     --brand-small-text:0.9rem;
+    --brand-join-waitlist-transition: .5s;
+    --brand-black-color: #000;
 }
 
 
@@ -113,7 +115,32 @@
     padding:7px;
 }
 
+/*app header styles*/
 
+.header-join-waitlist-button
+{
+    transition:var(--brand-join-waitlist-transition);
+}
+
+
+.about-join-waitlist-button
+{
+    transition: var(--brand-join-waitlist-transition);
+    color:var(--brand-white-color);
+    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
+    
+}
+
+.about-join-waitlist-button:hover{
+    cursor: pointer;
+    background:var(--brand-white-color);
+    color:var(--brand-black-color);
+}
+
+.header-join-waitlist-button:hover{
+    background:var(--brand-secondary-green-color);
+    color:var(--brand-white-color);
+}
 
 /*app hero*/
 
