@@ -44,9 +44,7 @@ const AppFooter = (): JSX.Element => {
           </ul>
         </section>
 
-        {/* <h5 className="fw-bold fs-5 text-capitalize text-light">join our mailing list</h5>
-                    <p className="brand-small-text-3 text-light">Get exclusive promotions & updates straight to your inbox</p>
-                    <AppEmailInput></AppEmailInput> */}
+      
         <section className="app-footer-mail-list col-sm-6 col-lg-3 col-md-4 my-3  ">
           <p className=" text-capitalize  text-light my-3">let's get social</p>
           <section className="app-footer-social-icons my-3">

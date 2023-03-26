@@ -81,8 +81,7 @@
     border:none;
     outline:none;
     border-radius:calc(var(--brand-button-border-radius) - 6px);
-    color:var(--brand-secondary-green-color);
-    
+    color:var(--brand-secondary-green-color);   
 }
 
 
@@ -113,6 +112,23 @@
 .subscribe-button
 {
     padding:7px;
+}
+
+
+.app-waitlist-button
+{
+    
+    width:80%;
+    color:white;
+    background:var(--brand-primary-green-color);
+    transition:.5s;
+    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
+}
+
+.app-waitlist-button:hover
+{
+    background:var(--brand-white-color);
+    color:var(--brand-black-color);
 }
 
 /*app header styles*/
@@ -186,8 +202,8 @@
 .social-icon
 {
     border-radius:50% !important;
-    width:30px;
-    height:30px;
+    width:40px;
+    height:40px;
     border: calc(var(--brand-button-outline-weight) - 1px) solid var(--brand-white-color);
     margin-right:10px;
     transition:.5s;
