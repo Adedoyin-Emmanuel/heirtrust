@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "./../assets/images/dashboard.svg";
 import HeroWave from "./app-hero-wave";
-
+import AppWailist from "./app-waitlist";
 interface appHeroProps {
   className: string;
 }
@@ -21,8 +21,13 @@ const AppHero = ({ className }: appHeroProps): JSX.Element =>
             welcome to HeirTrust, the best platform for intergenerational
             digital wealth transfer
           </p>
+          <section className="m-2">
+            <AppWailist />
+          </section>
         </section>
-        <HeroWave className=""/>
+
+        <section className="my-5 py-2 d-md-none"></section>
+        <HeroWave className="" />
       </section>
     </React.Fragment>
   );

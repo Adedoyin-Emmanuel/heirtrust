@@ -223,8 +223,25 @@
     cursor:pointer;
 }
 
+.main-waitlist-button
+{
+    color:var(--brand-white-color);
+    transition: .5s;
+    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
+}
+.main-waitlist-button:hover
+{
+    opacity: .8;
+}
+.main-waitlist-input:active,.main-waitlist-input:hover, .main-waitlist-input:focus
+{
+    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
+}
 
-
+.main-waitlist-input:active,.main-waitlist-input:hover, .main-waitlist-input:focus > .main-waitlist-button
+{
+    display:flex;
+}
 /*custom responsiveness*/
 @media (min-width: 667.98px) {
 	.width-toggle {

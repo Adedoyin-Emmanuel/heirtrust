@@ -5,7 +5,6 @@ import AppHeroImageContainer from '../components/app-hero-image';
 import AppAbout from '../components/app-about-section';
 import AppFooter from '../components/app-footer';
 import AppMailist from '../components/app-mailist';
-
 const Home = ():JSX.Element =>
 {
     return (
@@ -33,6 +32,7 @@ const Home = ():JSX.Element =>
                 <AppAbout/>
                 <AppMailist/>
                 <br/><br/><br/>
+                <br/><br/>
                 <AppFooter/>
             </section>
         </React.Fragment>
