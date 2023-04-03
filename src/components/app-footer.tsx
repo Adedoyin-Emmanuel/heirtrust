@@ -1,6 +1,6 @@
 import React from "react";
 import AppWhiteLogo from "./../assets/images/logo-white.svg";
-import AppEmailInput from "./app-email-input";
+import AppEmailInput from "./app-input";
 import SocialIcons from "./app-footer-social-icons";
 const AppFooter = (): JSX.Element => {
   return (
@@ -44,7 +44,6 @@ const AppFooter = (): JSX.Element => {
           </ul>
         </section>
 
-      
         <section className="app-footer-mail-list col-sm-6 col-lg-3 col-md-4 my-3  ">
           <p className=" text-capitalize  text-light my-3">let's get social</p>
           <section className="app-footer-social-icons my-3">
