@@ -29,6 +29,7 @@
     --brand-secondary-green-color: #47b74a;
     --brand-tertiary-green-color: #87d4c7;
     --brand-onboarding-green-color: #E0F7E1;
+    --brand-grey-color: #F4F7FA;
     --brand-white-color:#ffffff;
     --brand-button-border-radius: 10px;
     --brand-button-outline-weight:2px;
@@ -44,7 +45,10 @@
 {
     background: var(--brand-primary-blue-color);
 }
-
+.brand-bg-grey-color
+{
+    background: var(--brand-grey-color);
+}
 .brand-bg-secondary-blue
 {
     background: var(--brand-secondary-blue-color);
@@ -255,6 +259,33 @@
 .main-waitlist-input:active,.main-waitlist-input:hover, .main-waitlist-input:focus > .main-waitlist-button
 {
     display:flex;
+}
+
+
+/*mailing list styles */
+
+.award-frame
+{
+    background:url("./../../assets/images/confetti.svg");
+    transition:1s;
+    animation: animateConfetti 2s ease-in infinite;
+    transform:scale(1);
+}
+
+
+
+/*animation for the confetti*/
+
+@keyframes animateConfetti 
+{
+    from
+    {
+        transform: scale(1);
+    }
+    to
+    {
+        transform: scale(.9);
+    }
 }
 /*custom responsiveness*/
 @media (min-width: 667.98px) {

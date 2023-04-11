@@ -2,11 +2,18 @@ import React from "react";
 import AppWhiteLogo from "./../assets/images/logo-white.svg";
 import AppEmailInput from "./app-input";
 import SocialIcons from "./app-footer-social-icons";
-const AppFooter = (): JSX.Element => {
+import App from '../App';
+
+interface AppFooterProps
+{
+  className?: string;
+}
+const AppFooter = ({className}: AppFooterProps): JSX.Element => {
   return (
     <React.Fragment>
+      <section className="footer-spacing p-5 brand-bg-grey-color"></section>
       <section
-        className="app-footer container-fluid brand-bg-primary-blue  row p-0 m-0"
+        className={`app-footer container-fluid brand-bg-primary-blue row p-2 m-0 ${className}`}
         style={{ overflowX: "hidden" }}
       >
         <section className="app-footer-social-icons-container col-sm-6 col-lg-3 col-md-4 p-3 ">
@@ -16,6 +23,7 @@ const AppFooter = (): JSX.Element => {
               className="img-fluid"
               width="70"
               height="70"
+              alt="app logo"
             />
           </section>
 

@@ -11,7 +11,7 @@ const AppInput = ({className, placeHolder, type}:appInputProps): JSX.Element =>
 
   return (
     <React.Fragment>
-        <input type={type} className={`form-control brand-small-text-2 p-3 width-toggle-8 ${className}`} placeholder={placeHolder} />
+        <input type={type} className={`form-control brand-small-text-2 p-3  ${className}`} placeholder={placeHolder} />
     </React.Fragment>
   );
 };

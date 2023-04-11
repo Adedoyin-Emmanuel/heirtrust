@@ -19,7 +19,7 @@ const Home = ():JSX.Element =>
           {/* <section className="d-sm-block my-4">
                       <AppHeroImageContainer className="hero-image-container-lg" />
                 </section>  */}
-         
+
           <section className="d-md-block my-5 d-lg-none py-5 p-md-0">
             <AppHeroImageContainer className="my-5 py-5 hero-image-container-lg " />
           </section>
@@ -34,13 +34,10 @@ const Home = ():JSX.Element =>
           </section>
 
           <AppAbout />
-          <AppMailist />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <AppFooter />
+          <section className="brand-bg-grey-color">
+            <AppMailist />
+          </section>
+          <AppFooter className=""/>
         </section>
       </React.Fragment>
     );
