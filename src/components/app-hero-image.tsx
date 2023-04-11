@@ -1,15 +1,19 @@
 import React from "react";
 import HeroImage from "./../assets/images/dashboard-2.svg";
 
-interface appHeroImageProps
-{
-    className: string;
+interface appHeroImageProps {
+  className: string;
 }
-const AppHeroImageContainer = ({className}: appHeroImageProps): JSX.Element => 
-{
+const AppHeroImageContainer = ({
+  className,
+}: appHeroImageProps): JSX.Element => {
+  
   return (
     <React.Fragment>
-      <section className={`hero-image-container d-flex align-items-center justify-content-center ${className}`}>
+      <section
+        className={`hero-image-container d-flex align-items-center justify-content-center ${className}`}
+        
+      >
         <img
           src={HeroImage}
           className="img-fluid m-auto hero-image"
@@ -21,6 +25,5 @@ const AppHeroImageContainer = ({className}: appHeroImageProps): JSX.Element =>
     </React.Fragment>
   );
 };
-
 
 export default AppHeroImageContainer;

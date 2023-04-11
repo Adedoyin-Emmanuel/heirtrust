@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 import AppHeader from '../components/app-header';
 import AppHero from '../components/app-hero';
 import AppHeroImageContainer from '../components/app-hero-image';
 import AppAbout from '../components/app-about-section';
 import AppFooter from '../components/app-footer';
 import AppMailist from '../components/app-mailist';
+
 const Home = ():JSX.Element =>
 {
     return (

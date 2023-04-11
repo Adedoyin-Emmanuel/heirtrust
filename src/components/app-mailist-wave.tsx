@@ -10,6 +10,7 @@ const AppMailistWave = ({ className }: heroWaveProps): JSX.Element => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 319"
         className={`hero-wave p-0 m-0 ${className}`}
+        
       >
         <path
           fill="#fff"
