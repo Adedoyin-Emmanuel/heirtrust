@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "./../assets/images/dashboard.png";
+import HeroImage from "./../assets/images/dashboard.svg";
 
 interface appHeroImageProps
 {

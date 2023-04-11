@@ -162,7 +162,10 @@
 
 
 /*app hero*/
-
+.img-shrink
+{
+    transform: scale(.5);
+}
 .hero-image-container-md
 {
    transform:translateY(-10%);
@@ -170,17 +173,24 @@
 }
 .hero-image-container-lg
 {
-   transform:translateY(-55%);
+   transform:translateY(-18%);
 }
 
 .hero-image-container-xl
 {
-   transform:translateY(-65%);
+   transform:translateY(-20%);
 }
 
 .hero-image-container-xxl
 {
-   transform:translateY(-75%);
+   transform:translateY(-20%);
+}
+
+
+.app-hero-wave
+{
+    transform:translateY(px);
+    position:absolute;
 }
 
 

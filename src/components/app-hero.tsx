@@ -26,8 +26,8 @@ const AppHero = ({ className }: appHeroProps): JSX.Element =>
           </section>
         </section>
 
-        <section className="my-5 py-2 d-md-none"></section>
-        <HeroWave className="" />
+       <br/>
+        <HeroWave className="app-hero-wave" />
       </section>
     </React.Fragment>
   );
