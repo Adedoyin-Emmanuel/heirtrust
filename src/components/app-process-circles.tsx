@@ -2,16 +2,16 @@ import React from 'react'
 
 interface aboutProcessProps
 {
-    text:string;
+    imageSrc?:string;
     className:string;
 }
  
-const AppAboutProcess = ({text, className}: aboutProcessProps):JSX.Element =>
+const AppAboutProcess = ({imageSrc, className}: aboutProcessProps):JSX.Element =>
 {
     return (
         <React.Fragment>
-            <section className={`process-circle d-flex align-items-center justify-content-center ${className}`}>
-                <h2 className="fw-bold text-center m-auto">{text}</h2>
+            <section className={`process-circle  ${className}`}>
+                <img src={imageSrc} alt="onboarding-process" width={"40"} height={"40"} className="p-1 " />
             </section>
         </React.Fragment>
     );

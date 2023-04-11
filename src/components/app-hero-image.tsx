@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "./../assets/images/dashboard.svg";
+import HeroImage from "./../assets/images/dashboard-2.svg";
 
 interface appHeroImageProps
 {
@@ -13,6 +13,8 @@ const AppHeroImageContainer = ({className}: appHeroImageProps): JSX.Element =>
         <img
           src={HeroImage}
           className="img-fluid m-auto hero-image"
+          width="800"
+          height="800"
           alt="HeirTrust Dashboard"
         />
       </section>

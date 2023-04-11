@@ -20,7 +20,7 @@ const Home = ():JSX.Element =>
                       <AppHeroImageContainer className="hero-image-container-lg" />
                 </section>  */}
          
-          <section className="d-md-block my-4 d-lg-none py-5 p-md-0">
+          <section className="d-md-block my-5 d-lg-none py-5 p-md-0">
             <AppHeroImageContainer className="my-5 py-5 hero-image-container-lg " />
           </section>
           <section className="d-lg-block d-xl-none d-none">

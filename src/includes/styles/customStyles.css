@@ -22,12 +22,13 @@
 :root
 {
 
-    --brand-primary-blue-color: #12398D;
+    --brand-primary-blue-color: #062955;
     --brand-secondary-blue-color: #1a5baa;
     --brand-tertiary-blue-color: #38aecc;
     --brand-primary-green-color: #3ca062;
     --brand-secondary-green-color: #47b74a;
     --brand-tertiary-green-color: #87d4c7;
+    --brand-onboarding-green-color: #E0F7E1;
     --brand-white-color:#ffffff;
     --brand-button-border-radius: 10px;
     --brand-button-outline-weight:2px;
@@ -186,7 +187,10 @@
    transform:translateY(-20%);
 }
 
-
+.hero-image
+{
+   
+}
 .app-hero-wave
 {
     transform:translateY(px);
@@ -203,10 +207,10 @@
 
 .process-circle
 {
-    width:50px;
-    height: 50px;
+    width:40px;
+    height: 40px;
     border-radius:50% !important;
-    background:var(--brand-tertiary-green-color);
+    background:var(--brand-onboarding-green-color);
 }
 
 
