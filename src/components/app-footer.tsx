@@ -1,8 +1,6 @@
 import React from "react";
 import AppWhiteLogo from "./../assets/images/logo-white.svg";
-import AppEmailInput from "./app-input";
 import SocialIcons from "./app-footer-social-icons";
-import App from '../App';
 
 interface AppFooterProps
 {
