@@ -11,7 +11,7 @@ const AppMailist = (): JSX.Element => {
   return (
     <React.Fragment>
     <AppMailistWave className="p-0"/>
-      <section className="container-fluid d-flex flex-column flex-md-row align-items-center  justify-content-around">
+      <section className="container-fluid d-flex flex-column flex-md-row align-items-center  justify-content-around" data-aos="zoom-in-up" data-aos-duration="300">
         <section className="award-win-section d-flex flex-column align-items-center justify-content-center">
           <AppAwardFrame className="my-2" />
             <h6 className="text-capitalize fs-6 fw-bold my-2">
