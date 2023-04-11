@@ -4,10 +4,17 @@ const inputStyles = {
     "boxShadow": "none"
 }
 const AppWailist = () => {
+
+const handleWaitlistButtonClick = (e: React.FormEvent<HTMLFormElement>) =>
+{
+    e.preventDefault();
+    
+    console.log(e);
+}
   return (
     <React.Fragment>
       <section className="app-waitlist-section  width-toggle-8 m-auto">
-        <section className="input-group">
+        <form className="input-group" onSubmit={(e:React.FormEvent<HTMLFormElement>)=>{handleWaitlistButtonClick(e)}}>
           <input
             type="text"
             className="form-control brand-small-text-2 p-3 width-toggle-8 main-waitlist-input"
@@ -17,11 +24,11 @@ const AppWailist = () => {
             style={inputStyles}
           />
           <button
-            className=" brand-small-text text-capitalize brand-button brand-bg-primary-green main-waitlist-button p-2 " id="basic-addon-2" 
+            className=" brand-small-text text-capitalize brand-button brand-bg-secondary-green main-waitlist-button p-2 " id="basic-addon-2" 
           >
             join waitlist
           </button>
-        </section>
+        </form>
       </section>
     </React.Fragment>
   );

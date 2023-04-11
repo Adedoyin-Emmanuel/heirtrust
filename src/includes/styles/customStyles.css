@@ -125,7 +125,7 @@
     
     width:80%;
     color:white;
-    background:var(--brand-primary-green-color);
+    background:var(--brand-secondary-green-color);
     transition:.5s;
     border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
 }
