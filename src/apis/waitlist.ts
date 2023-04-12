@@ -15,13 +15,7 @@ const connectToBackend = async (email: string): Promise<Response> => {
       email: userEmail,
     },
     dataType: "json",
-    crossDomain: true,
-    xhrFields: {
-      withCredentials: true,
-    },
     headers: {
-      "Access-Control-Allow-Origin": "https://heirtrust.vercel.app",
-      origin: "https://heirtrust.vercel.app",
       "api-key": apiKEY,
     },
     method: "GET",
