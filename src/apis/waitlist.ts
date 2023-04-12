@@ -11,12 +11,18 @@ const connectToBackend = async (email: string): Promise<Response> => {
   return $.ajax({
     url: `${apiURL}`,
     data: {
-        email: userEmail,
+      email: userEmail,
+    },
+    dataType: "json",
+    crossDomain: true,
+    xhrFields: {
+      withCredentials: true,
     },
     headers: {
-        "api-key": apiKEY
+      Origin: "https://heirtrust.vercel.app",
+      "api-key": apiKEY,
     },
-    method: 'GET',
+    method: "GET",
   });
   
 };
