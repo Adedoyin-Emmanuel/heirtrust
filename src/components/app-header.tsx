@@ -1,7 +1,7 @@
 import React from 'react'
 import AppBlueLogo from "./../assets/images/logo-blue.svg";
 import AppButton from './app-button';
-
+import { scrollIntoElement } from '../apis/utilities';
 
 interface appHeaderProps
 {
@@ -13,6 +13,7 @@ const AppHeader = ({className}: appHeaderProps):JSX.Element =>
     const handleButtonClick = ():void =>
     {
         //pass
+         scrollIntoElement("hero_section");
     }
     return (
         <React.Fragment>

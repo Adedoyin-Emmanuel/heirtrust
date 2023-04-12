@@ -9,7 +9,7 @@ interface AppFooterProps
 const AppFooter = ({className}: AppFooterProps): JSX.Element => {
   return (
     <React.Fragment>
-      <section className="footer-spacing p-5 brand-bg-grey-color"></section>
+      <section className="footer-spacing p-5 brand-bg-grey-color"><br/><br/><br/></section>
       <section
         className={`app-footer container-fluid brand-bg-primary-blue row p-2 m-0 ${className}`}
         style={{ overflowX: "hidden" }}

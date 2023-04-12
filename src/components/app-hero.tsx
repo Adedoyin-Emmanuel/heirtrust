@@ -16,6 +16,7 @@ const AppHero = ({ className }: appHeroProps): JSX.Element =>
         data-aos="fade-in-up"
         data-aos-duration="200"
         className={`app-hero brand-bg-primary-blue p-0 m-0 ${className}`}
+        id="hero_section"
       >
         <section className="hero-heading py-5">
           <h1 className="display-7 fw-bold text-light text-center p-2 animate__animated animate__bounce">

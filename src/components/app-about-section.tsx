@@ -5,6 +5,7 @@ import PeaceSymbol from "./../assets/images/Peace Symbol.svg";
 import DataEncryptionSymbol from "./../assets/images/Data Encryption.svg";
 import AutomaticSymbol from "./../assets/images/Automatic.svg";
 import BatchAssignSymbol from "./../assets/images/Batch Assign.svg";
+import { scrollIntoElement } from '../apis/utilities';
 
 
 const AppAbout = (): JSX.Element => 
@@ -15,6 +16,7 @@ const AppAbout = (): JSX.Element =>
     const handleClick = ():void =>
     {
         //pass
+        scrollIntoElement("hero_section");
     }
     
   return (
@@ -45,7 +47,7 @@ const AppAbout = (): JSX.Element =>
           <section className="connect-button-container d-flex align-items-center my-2">
             <AppButton
               text="join waitlist"
-              className="brand-button brand-bg-primary-green text-capitalize brand-small-text-2 p-2 about-join-waitlist-button"
+              className="brand-button brand-bg-secondary-green text-capitalize brand-small-text-2 p-2 about-join-waitlist-button"
               onClick={handleClick}
             />
           </section>
