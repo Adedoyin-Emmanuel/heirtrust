@@ -6,3 +6,11 @@ export const sanitizeEmail = (email: string): boolean => {
 
   return emailRegex.test(userEmail) ? true : false;
 };
+
+
+export const scrollIntoElement = (element: string) =>
+{
+  document.getElementById(`${element}`)?.scrollIntoView({
+    behavior: "smooth",
+  });
+}

@@ -1,11 +1,15 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { sanitizeEmail } from "../apis/utilities";
 import connectToBackend from "../apis/waitlist";
 import Swal from "sweetalert2";
+import Confetti from 'react-confetti';
+
 const inputStyles = {
   boxShadow: "none",
 };
 const AppWailist = () => {
+
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
   const handleWaitlistButtonClick = (e: any) => {
     e.preventDefault();
 
@@ -15,9 +19,50 @@ const AppWailist = () => {
     if (sanitizeEmail(userEmail)) {
       //email is valid
       const awaitResponse = async () => {
-        const response = await connectToBackend(userEmail);
+        const response:any = await connectToBackend(userEmail);
 
-        console.log(response);
+        if (
+          response.status === 200 &&
+          response.body.message.includes(
+            "You have been added to the waitlist"
+          ) &&
+          response.addedToWaitlist === true
+        ) {
+          setShowConfetti(true);
+          Swal.fire({
+            title: "Congrats",
+            icon: "success",
+            text: response.body.message,
+            showConfirmButton: true,
+            confirmButtonText: "Proceed",
+            confirmButtonColor: "#3ca062",
+            position: "center",
+          });
+        } else if (
+          response.status === 409 &&
+          response.body.message.includes("you are already on the waitlist")
+        ) {
+          Swal.fire({
+            title: "Error",
+            icon: "warning",
+            text: response.body.message,
+            showConfirmButton: true,
+            confirmButtonText: "Proceed",
+            confirmButtonColor: "#3ca062",
+            position: "center",
+          });
+        }else{
+        
+           Swal.fire({
+             title: "Fatal Error",
+             icon: "error",
+             text: "An unknown error occurred",
+             showConfirmButton: true,
+             confirmButtonText: "Proceed",
+             confirmButtonColor: "#3ca062",
+             position: "center",
+           });
+        }
       };
 
       try {
@@ -36,10 +81,22 @@ const AppWailist = () => {
       });
     }
   };
+  
+    useEffect(() => {
+    if (showConfetti) {
+      const timer = setTimeout(() => {
+        setShowConfetti(false);
 
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [showConfetti]);
+
+  
   return (
     <React.Fragment>
       <section className="app-waitlist-section  width-toggle-8 m-auto">
+        {showConfetti && <Confetti  />}
         <form
           className="input-group"
           onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
@@ -60,7 +117,7 @@ const AppWailist = () => {
             className=" brand-small-text text-capitalize brand-button brand-bg-secondary-green main-waitlist-button p-2 "
             id="basic-addon-2"
           >
-            join waitlist
+            {showConfetti ? "Joined Waitlist" : "join waitlist"}
           </button>
         </form>
       </section>
