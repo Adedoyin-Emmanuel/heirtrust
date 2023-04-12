@@ -127,7 +127,7 @@
     color:white;
     background:var(--brand-secondary-green-color);
     transition:.5s;
-    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
+    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
 }
 
 .app-waitlist-button:hover

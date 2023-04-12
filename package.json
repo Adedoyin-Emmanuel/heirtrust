@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4"
+    "@types/aos": "^3.0.4",
+    "@types/jquery": "^3.5.16"
   }
 }
