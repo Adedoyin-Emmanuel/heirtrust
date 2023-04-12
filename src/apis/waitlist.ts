@@ -19,7 +19,7 @@ const connectToBackend = async (email: string): Promise<Response> => {
       withCredentials: true,
     },
     headers: {
-      Origin: "https://heirtrust.vercel.app",
+      origin: "https://heirtrust.vercel.app",
       "api-key": apiKEY,
     },
     method: "GET",
