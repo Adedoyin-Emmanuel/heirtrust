@@ -16,8 +16,7 @@ const connectToBackend = async (email: string): Promise<Response> => {
     },
     dataType: "json",
     headers: {
-      "Access-Control-Allow-Origin": "https://heirtrust.vercel.app",
-      "api-key": apiKEY,
+      "api-key": apiKEY
     },
     method: "GET",
   });
