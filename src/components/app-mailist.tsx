@@ -20,10 +20,10 @@ const AppMailist = (): JSX.Element => {
         </section>
         <section className="maillist-section my-5 my-md-0">
           <h1 className="fw-bold fs-1 my-3 text-capitalize text-center">
-            join our mailing list{" "}
+            join our waitlist list{" "}
           </h1>
-          <p className="brand-small-text text-dark text-capitalize">
-            get exclusive promotions & updates straight to your inbox. No spam!
+          <p className="brand-small-text text-dark text-capitalize text-start text-md-center">
+            join the waitlist to get notified when we launch!
           </p>
           <section className="email-input d-flex align-items-center flex-column">
             <AppInput
@@ -38,7 +38,7 @@ const AppMailist = (): JSX.Element => {
             />
 
             <AppButton
-              text="subscribe"
+              text="join waitlist"
               className="text-capitalize app-waitlist-button text-center p-2 "
               onClick={handleClick}
             />
