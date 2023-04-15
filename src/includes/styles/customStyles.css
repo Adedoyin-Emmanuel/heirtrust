@@ -1,320 +1,271 @@
 /*customStyles for HeirTrust*/
 
-@font-face
-{
-    font-family: poppins;
-    src: url("./../../assets/fonts/poppins.ttf");
+@font-face {
+  font-family: poppins;
+  src: url("./../../assets/fonts/poppins.ttf");
 }
 
-
-@font-face 
-{
-    font-family: poppins;
-    src: url("./../../assets/fonts/poppins_bold.ttf");
-    font-weight: bold;
+@font-face {
+  font-family: poppins;
+  src: url("./../../assets/fonts/poppins_bold.ttf");
+  font-weight: bold;
 }
 
-*
-{
-    font-family:poppins;
+* {
+  font-family: poppins;
 }
 
-:root
-{
-
-    --brand-primary-blue-color: #062955;
-    --brand-secondary-blue-color: #1a5baa;
-    --brand-tertiary-blue-color: #38aecc;
-    --brand-primary-green-color: #3ca062;
-    --brand-secondary-green-color: #47b74a;
-    --brand-tertiary-green-color: #87d4c7;
-    --brand-onboarding-green-color: #E0F7E1;
-    --brand-grey-color: #F4F7FA;
-    --brand-white-color:#ffffff;
-    --brand-button-border-radius: 10px;
-    --brand-button-outline-weight:2px;
-    --brand-small-text:0.9rem;
-    --brand-join-waitlist-transition: .5s;
-    --brand-black-color: #000;
+:root {
+  --brand-primary-blue-color: #062955;
+  --brand-secondary-blue-color: #1a5baa;
+  --brand-tertiary-blue-color: #38aecc;
+  --brand-primary-green-color: #3ca062;
+  --brand-secondary-green-color: #47b74a;
+  --brand-tertiary-green-color: #87d4c7;
+  --brand-onboarding-green-color: #e0f7e1;
+  --brand-grey-color: #f4f7fa;
+  --brand-white-color: #ffffff;
+  --brand-button-border-radius: 10px;
+  --brand-button-outline-weight: 2px;
+  --brand-small-text: 0.9rem;
+  --brand-join-waitlist-transition: 0.5s;
+  --brand-black-color: #000;
 }
-
 
 /*app utility color classes*/
 
-.brand-bg-primary-blue
-{
-    background: var(--brand-primary-blue-color);
+.brand-bg-primary-blue {
+  background: var(--brand-primary-blue-color);
 }
-.brand-bg-grey-color
-{
-    background: var(--brand-grey-color);
+.brand-bg-grey-color {
+  background: var(--brand-grey-color);
 }
-.brand-bg-secondary-blue
-{
-    background: var(--brand-secondary-blue-color);
+.brand-bg-secondary-blue {
+  background: var(--brand-secondary-blue-color);
 }
 
-.brand-bg-tertiary-blue
-{
-    background: var(--brand-tertiary-blue-color);
+.brand-bg-tertiary-blue {
+  background: var(--brand-tertiary-blue-color);
 }
 
-.brand-bg-primary-green
-{
-    background: var(--brand-primary-green-color);
+.brand-bg-primary-green {
+  background: var(--brand-primary-green-color);
 }
 
-
-.brand-bg-secondary-green
-{
-    background: var(--brand-secondary-green-color);
+.brand-bg-secondary-green {
+  background: var(--brand-secondary-green-color);
 }
 
-
-.brand-bg-tertiary-green
-{
-    background: var(--brand-tertiary-green-color);
+.brand-bg-tertiary-green {
+  background: var(--brand-tertiary-green-color);
 }
 
-.brand-bg-white
-{
-    background: var(--brand-white-color);
+.brand-bg-white {
+  background: var(--brand-white-color);
 }
 
-.brand-button
-{
-    border:none;
-    outline:none;
-    border-radius:calc(var(--brand-button-border-radius) - 6px);
-    color:var(--brand-secondary-green-color);   
+.brand-button {
+  border: none;
+  outline: none;
+  border-radius: calc(var(--brand-button-border-radius) - 6px);
+  color: var(--brand-secondary-green-color);
 }
 
-
-
-.brand-small-text
-{
-    font-size:var(--brand-small-text);
+.brand-small-text {
+  font-size: var(--brand-small-text);
 }
 
-.brand-small-text-2
-{
-    font-size:calc(var(--brand-small-text) - 0.1rem);
+.brand-small-text-2 {
+  font-size: calc(var(--brand-small-text) - 0.1rem);
 }
 
-.brand-small-text-3
-{
-    font-size:calc(var(--brand-small-text) - 0.2rem);
+.brand-small-text-3 {
+  font-size: calc(var(--brand-small-text) - 0.2rem);
 }
-.brand-button-outline-green
-{
-    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
-}
-
-.subscribe-button-container
-{
-    transform: translateX(-20px);
-}
-.subscribe-button
-{
-    padding:7px;
+.brand-button-outline-green {
+  border: var(--brand-button-outline-weight) solid
+    var(--brand-secondary-green-color);
 }
 
-
-.app-waitlist-button
-{
-    
-    width:80%;
-    color:white;
-    background:var(--brand-secondary-green-color);
-    transition:.5s;
-    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
+.subscribe-button-container {
+  transform: translateX(-20px);
+}
+.subscribe-button {
+  padding: 7px;
 }
 
-.app-waitlist-button:hover
-{
-    background:var(--brand-white-color);
-    color:var(--brand-black-color);
+.app-waitlist-button {
+  width: 80%;
+  color: white;
+  background: var(--brand-secondary-green-color);
+  transition: 0.5s;
+  border: var(--brand-button-outline-weight) solid
+    var(--brand-secondary-green-color);
+}
+
+.app-waitlist-button:hover {
+  background: var(--brand-white-color);
+  color: var(--brand-black-color);
 }
 
 /*app header styles*/
 
-.header-join-waitlist-button
-{
-    transition:var(--brand-join-waitlist-transition);
-    background:var(--brand-secondary-green-color);
-    color:var(--brand-white-color);
+.header-join-waitlist-button {
+  transition: var(--brand-join-waitlist-transition);
+  background: var(--brand-secondary-green-color);
+  color: var(--brand-white-color);
 }
 
-.header-join-waitlist-button:hover{
-    color:var(--brand-black-color);
-    background:var(--brand-white-color);
+.header-join-waitlist-button:hover {
+  color: var(--brand-black-color);
+  background: var(--brand-white-color);
 }
 
-.about-join-waitlist-button
-{
-    transition: var(--brand-join-waitlist-transition);
-    color:var(--brand-white-color);
-    border:var(--brand-button-outline-weight) solid var(--brand-secondary-green-color);
-    
+.about-join-waitlist-button {
+  transition: var(--brand-join-waitlist-transition);
+  color: var(--brand-white-color);
+  border: var(--brand-button-outline-weight) solid
+    var(--brand-secondary-green-color);
 }
 
-.about-join-waitlist-button:hover{
-    cursor: pointer;
-    background:var(--brand-white-color);
-    color:var(--brand-black-color);
+.about-join-waitlist-button:hover {
+  cursor: pointer;
+  background: var(--brand-white-color);
+  color: var(--brand-black-color);
 }
-
-
 
 /*app hero*/
-.img-shrink
-{
-    transform: scale(.5);
+.img-shrink {
+  transform: scale(0.5);
 }
-.hero-image-container-md
-{
-   transform:translateY(-10%);
-   
-}
-.hero-image-container-lg
-{
-   transform:translateY(-18%);
+.hero-image {
+  border: 5px solid var(--brand-white-color);
 }
 
-.hero-image-container-xl
-{
-   transform:translateY(-20%);
+.hero-image-container-md {
+  transform: translateY(-10%);
+}
+.hero-image-container-lg {
+  transform: translateY(-18%);
 }
 
-.hero-image-container-xxl
-{
-   transform:translateY(-20%);
+.hero-image-container-xl {
+  transform: translateY(-20%);
 }
 
-
-.app-hero-wave
-{
-    transform:translateY(px);
-    position:absolute;
+.hero-image-container-xxl {
+  transform: translateY(-20%);
 }
 
+.app-hero-wave {
+  transform: translateY(px);
+  position: absolute;
+}
 
 /*app about*/
 
-.app-about
-{
-    transform:translateY(-160px);
+.app-about {
+  transform: translateY(-160px);
 }
 
-.process-circle
-{
-    width:40px;
-    height: 40px;
-    border-radius:50% !important;
-    background:var(--brand-onboarding-green-color);
+.process-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  background: var(--brand-onboarding-green-color);
 }
-
 
 /*social icons*/
 
-.social-icon
-{
-    border-radius:50% !important;
-    width:40px;
-    height:40px;
-    border: calc(var(--brand-button-outline-weight) - 1px) solid var(--brand-white-color);
-    margin-right:10px;
-    transition:.5s;
+.social-icon {
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+  border: calc(var(--brand-button-outline-weight) - 1px) solid
+    var(--brand-white-color);
+  margin-right: 10px;
+  transition: 0.5s;
 }
 
-.social-icon:hover{
-    cursor:pointer;
-    background:var(--brand-secondary-green-color)
+.social-icon:hover {
+  cursor: pointer;
+  background: var(--brand-secondary-green-color);
 }
 
-
-.app-about-process
-{
-    cursor:pointer;
+.app-about-process {
+  cursor: pointer;
 }
 
-.main-waitlist-button
-{
-    color:var(--brand-white-color);
-    transition: .5s;
-    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
+.main-waitlist-button {
+  color: var(--brand-white-color);
+  transition: 0.5s;
+  border: var(--brand-button-outline-weight) solid
+    var(--brand-primary-green-color);
 }
-.main-waitlist-button:hover
-{
-    opacity: .8;
+.main-waitlist-button:hover {
+  opacity: 0.8;
 }
-.main-waitlist-input:active,.main-waitlist-input:hover, .main-waitlist-input:focus
-{
-    border:var(--brand-button-outline-weight) solid var(--brand-primary-green-color);
-}
-
-.main-waitlist-input:active,.main-waitlist-input:hover, .main-waitlist-input:focus > .main-waitlist-button
-{
-    display:flex;
+.main-waitlist-input:active,
+.main-waitlist-input:hover,
+.main-waitlist-input:focus {
+  border: var(--brand-button-outline-weight) solid
+    var(--brand-primary-green-color);
 }
 
+.main-waitlist-input:active,
+.main-waitlist-input:hover,
+.main-waitlist-input:focus > .main-waitlist-button {
+  display: flex;
+}
 
 /*mailing list styles */
 
-.award-frame
-{
-    background:url("./../../assets/images/confetti.svg");
-    transition:1s;
-    animation: animateConfetti 2s ease-in infinite;
-    transform:scale(1);
+.award-frame {
+  background: url("./../../assets/images/confetti.svg");
+  transition: 1s;
+  animation: animateConfetti 2s ease-in infinite;
+  transform: scale(1);
 }
-
-
 
 /*animation for the confetti*/
 
-@keyframes animateConfetti 
-{
-    from
-    {
-        transform: scale(1);
-    }
-    to
-    {
-        transform: scale(.9);
-    }
+@keyframes animateConfetti {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
 }
 /*custom responsiveness*/
 @media (min-width: 667.98px) {
-	.width-toggle {
-		width: 35%;
-	}
-	.width-toggle-2 {
-		width: 75%;
-		
-	}
-	.width-toggle-5{
-		width:90%;
-	}
+  .width-toggle {
+    width: 35%;
+  }
+  .width-toggle-2 {
+    width: 75%;
+  }
+  .width-toggle-5 {
+    width: 90%;
+  }
 
-	.width-toggle-3 {
-		width: 50%;
-	}
-	.width-toggle-4{
-		width:30%;
-	}
-	.width-toggle-8{
-	    width:60%;
-	}
-	.width-toggle-7{
-		width:40%;
-	}
-	.width-toggle-6{
-		width:25%;
-	}
+  .width-toggle-3 {
+    width: 50%;
+  }
+  .width-toggle-4 {
+    width: 30%;
+  }
+  .width-toggle-8 {
+    width: 60%;
+  }
+  .width-toggle-7 {
+    width: 40%;
+  }
+  .width-toggle-6 {
+    width: 25%;
+  }
 
-	.width-toggle-dash{
-		width:20%;
-	}
-
+  .width-toggle-dash {
+    width: 20%;
+  }
 }
