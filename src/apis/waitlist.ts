@@ -1,11 +1,12 @@
 import $ from "jquery";
 
-const connectToBackend = async (email: string): Promise<Response> => {
-  if (!email)
+const connectToBackend = async (email: string, username:string): Promise<Response> => {
+  if (!email || !username)
     return Promise.reject(
-      new Error("pass a valid email address to the function")
+      new Error("pass a username or a valid email address")
     );
   const userEmail = email;
+  const userName = username;
   const apiKEY = process.env.REACT_APP_API_KEY;
   const apiURL = process.env.REACT_APP_API_URL;
 
@@ -13,6 +14,7 @@ const connectToBackend = async (email: string): Promise<Response> => {
     url: `${apiURL}`,
     data: {
       email: userEmail,
+      userName:userName
     },
     dataType: "json",
     headers: {

@@ -1,6 +1,5 @@
 import React from "react";
 import HeroWave from "./app-hero-wave";
-import AppWailist from "./app-waitlist";
 
 interface appHeroProps {
   className: string;
@@ -28,11 +27,11 @@ const AppHero = ({ className }: appHeroProps): JSX.Element =>
             digital wealth transfer
           </p>
           <section className="m-2">
-            <AppWailist />
+          
           </section>
         </section>
 
-        <br />
+        <br/>
         <HeroWave className="app-hero-wave" />
       </section>
     </React.Fragment>

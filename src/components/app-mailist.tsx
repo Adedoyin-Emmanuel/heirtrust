@@ -1,22 +1,113 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppInput from "./app-input";
 import AppButton from "./app-button";
 import AppAwardFrame from "./app-award-frame";
 import AppMailistWave from "./app-mailist-wave";
+import Swal from "sweetalert2";
+import { sanitizeEmail } from "../apis/utilities";
+import connectToBackend from "../apis/waitlist";
+import Confetti from "react-confetti";
+
 const AppMailist = (): JSX.Element => {
-  const handleClick = (): void => {
-    //pass
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
+
+  const handleWaitlistButtonClick = (e: any) => {
+    e.preventDefault();
+
+    const userEmail = e.currentTarget.elements[0].value;
+    const userName = e.currentTarget.elements[1].value;
+
+    if (!userName || !userEmail || userName == "") {
+      Swal.fire({
+        toast: true,
+        text: "Username and Email are required",
+        icon: "error",
+        showConfirmButton: false,
+        position: "top",
+        timer: 2000,
+      });
+    }
+    //check if email is valid
+    if (sanitizeEmail(userEmail)) {
+      //email is valid
+      const awaitResponse = async () => {
+        const response: any = await connectToBackend(userEmail, userName);
+
+        if (
+          response.status === 200 &&
+          response.body.message.includes(
+            "You have been added to the waitlist"
+          ) &&
+          response.addedToWaitlist === true
+        ) {
+          setShowConfetti(true);
+          Swal.fire({
+            title: "Congrats",
+            icon: "success",
+            text: response.body.message,
+            showConfirmButton: true,
+            confirmButtonText: "Proceed",
+            confirmButtonColor: "#3ca062",
+            position: "center",
+          });
+        } else if (
+          response.status === 409 &&
+          response.body.message.includes("you are already on the waitlist")
+        ) {
+          Swal.fire({
+            title: "Error",
+            icon: "warning",
+            text: response.body.message,
+            showConfirmButton: true,
+            confirmButtonText: "Proceed",
+            confirmButtonColor: "#3ca062",
+            position: "center",
+          });
+        } else {
+          Swal.fire({
+            title: "Fatal Error",
+            icon: "error",
+            text: "An unknown error occurred",
+            showConfirmButton: true,
+            confirmButtonText: "Proceed",
+            confirmButtonColor: "#3ca062",
+            position: "center",
+          });
+        }
+      };
+
+      try {
+        awaitResponse();
+      } catch (err: any) {
+        console.log(err);
+      }
+    } else {
+      Swal.fire({
+        toast: true,
+        text: "Invalid email address",
+        icon: "error",
+        showConfirmButton: false,
+        position: "top",
+        timer: 2000,
+      });
+    }
   };
 
   return (
     <React.Fragment>
-    <AppMailistWave className="p-0"/>
-      <section className="container-fluid d-flex flex-column flex-md-row align-items-center  justify-content-around" data-aos="zoom-in-up" data-aos-duration="300">
+      <AppMailistWave className="p-0" />
+      <section
+        className="container-fluid d-flex flex-column flex-md-row align-items-center  justify-content-around"
+        data-aos="zoom-in-up"
+        data-aos-duration="300"
+        id="app_waitlist"
+      >
+        {showConfetti && <Confetti />}
         <section className="award-win-section d-flex flex-column align-items-center justify-content-center">
           <AppAwardFrame className="my-2" />
-            <h6 className="text-capitalize fs-6 fw-bold my-2">
-              honourable price mention in NEAR metabuild season III
-            </h6>
+          <h6 className="text-capitalize fs-6 fw-bold my-2">
+            honourable price mention in NEAR metabuild season III
+          </h6>
         </section>
         <section className="maillist-section my-5 my-md-0">
           <h1 className="fw-bold fs-1 my-3 text-capitalize text-center">
@@ -25,7 +116,12 @@ const AppMailist = (): JSX.Element => {
           <p className="brand-small-text text-dark text-capitalize text-start text-md-center">
             join the waitlist to get notified when we launch!
           </p>
-          <section className="email-input d-flex align-items-center flex-column">
+          <form
+            className="email-input d-flex align-items-center flex-column"
+            onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+              handleWaitlistButtonClick(e);
+            }}
+          >
             <AppInput
               type="text"
               className="my-3"
@@ -33,18 +129,23 @@ const AppMailist = (): JSX.Element => {
             />
             <AppInput
               type="email"
-              className="my-3"
-              placeHolder="Enter your email here"
+              className="m-3"
+              placeHolder="Enter your email"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon-2"
+              name="email"
+              autoComplete={"false"}
             />
 
             <AppButton
               text="join waitlist"
               className="text-capitalize app-waitlist-button text-center p-2 "
-              onClick={handleClick}
             />
-          </section>
+          </form>
         </section>
       </section>
+      <br />
+      <br />
     </React.Fragment>
   );
 };

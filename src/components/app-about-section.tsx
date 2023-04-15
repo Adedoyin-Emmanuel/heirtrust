@@ -16,7 +16,7 @@ const AppAbout = (): JSX.Element =>
     const handleClick = ():void =>
     {
         //pass
-        scrollIntoElement("hero_section");
+        scrollIntoElement("app_waitlist");
     }
     
   return (
@@ -34,8 +34,7 @@ const AppAbout = (): JSX.Element =>
 
           <p
             className="brand-small-text-2 text-start my-3"
-            data-aos-delay="20"
-            data-aos="fade-left"
+            
           >
             HeirTrust is a blockchain based multichain will/testament, backup,
             recovery and iheritance platform for crypto assets and files. It
@@ -56,8 +55,7 @@ const AppAbout = (): JSX.Element =>
         <section className="about-steps col-lg-7 col-md-12 row">
           <section
             className="about-step-1 col-md-6 d-flex  flex-md-column align-items-center align-items-md-start justify-content-around p-3 m-md-0 m-1"
-            data-aos="zoom-in"
-            data-aos-duration="200"
+           
           >
             <AppAboutProcess
               imageSrc={AutomaticSymbol}
@@ -71,8 +69,7 @@ const AppAbout = (): JSX.Element =>
 
           <section
             className="about-step-2 col-md-6 d-flex  flex-md-column align-items-center align-items-md-start justify-content-center p-3 m-md-0 m-1"
-            data-aos="zoom-in"
-            data-aos-duration="300"
+           
           >
             <AppAboutProcess
               imageSrc={DataEncryptionSymbol}
@@ -87,8 +84,7 @@ const AppAbout = (): JSX.Element =>
 
           <section
             className="about-step-3 col-md-6 d-flex  flex-md-column align-items-center align-items-md-start justify-content-center p-3 m-md-0 m-1"
-            data-aos="zoom-in"
-            data-aos-duration="400"
+            
           >
             <AppAboutProcess
               imageSrc={BatchAssignSymbol}
@@ -104,8 +100,7 @@ const AppAbout = (): JSX.Element =>
 
           <section
             className="about-step-4 col-md-6 d-flex  flex-md-column align-items-center align-items-md-start justify-content-center p-3 m-md-0 m-1"
-            data-aos="zoom-in"
-            data-aos-duration="500"
+           
           >
             <AppAboutProcess
               imageSrc={PeaceSymbol}

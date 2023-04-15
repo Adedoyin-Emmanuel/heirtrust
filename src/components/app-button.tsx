@@ -4,7 +4,7 @@ interface appButtonProps
 {
     text:string ;
     className:string;
-    onClick: ()=> void;
+    onClick?: ()=> void;
     
 }
 const AppButton = ({text, className, onClick}: appButtonProps):JSX.Element => 

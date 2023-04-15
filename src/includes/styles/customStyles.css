@@ -139,7 +139,7 @@
   transform: scale(0.5);
 }
 .hero-image {
-  border: 5px solid var(--brand-white-color);
+  border: 3px solid var(--brand-white-color);
 }
 
 .hero-image-container-md {
