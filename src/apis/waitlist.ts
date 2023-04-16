@@ -2,6 +2,7 @@ import $ from "jquery";
 
 const connectToBackend = async (email: string, username:string): Promise<Response> => {
   if (!email || !username)
+  
     return Promise.reject(
       new Error("pass a username or a valid email address")
     );
