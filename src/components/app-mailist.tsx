@@ -6,18 +6,15 @@ import AppMailistWave from "./app-mailist-wave";
 import Swal from "sweetalert2";
 import { sanitizeEmail } from "../apis/utilities";
 import connectToBackend from "../apis/waitlist";
-import Confetti from "react-confetti";
 
 const AppMailist = (): JSX.Element => {
-  const [showConfetti, setShowConfetti] = useState<boolean>(false);
-
   const handleWaitlistButtonClick = (e: any) => {
     e.preventDefault();
 
-    const userEmail = e.currentTarget.elements[0].value;
-    const userName = e.currentTarget.elements[1].value;
+    const userEmail = e.currentTarget.elements[1].value;
+    const userName = e.currentTarget.elements[0].value;
 
-    if (!userName || !userEmail || userName == "") {
+    if (!userName || !userEmail || userName === "") {
       Swal.fire({
         toast: true,
         text: "Username and Email are required",
@@ -26,6 +23,7 @@ const AppMailist = (): JSX.Element => {
         position: "top",
         timer: 2000,
       });
+      return;
     }
     //check if email is valid
     if (sanitizeEmail(userEmail)) {
@@ -40,7 +38,12 @@ const AppMailist = (): JSX.Element => {
           ) &&
           response.addedToWaitlist === true
         ) {
-          setShowConfetti(true);
+          localStorage.setItem("showConfetti", "true");
+
+          setTimeout(() => {
+            localStorage.setItem("showConfetti", "false");
+          }, 7000);
+
           Swal.fire({
             title: "Congrats",
             icon: "success",
@@ -52,22 +55,25 @@ const AppMailist = (): JSX.Element => {
           });
         } else if (
           response.status === 409 &&
-          response.body.message.includes("you are already on the waitlist")
+          response.body.message.includes("Contact already exist")
         ) {
           Swal.fire({
             title: "Error",
             icon: "warning",
-            text: response.body.message,
+            text: "You are already on the waitlist!",
             showConfirmButton: true,
             confirmButtonText: "Proceed",
             confirmButtonColor: "#3ca062",
             position: "center",
           });
-        } else {
+        } else if (
+          response.status === 400 &&
+          response.body.message.includes("Contact already exist")
+        ) {
           Swal.fire({
-            title: "Fatal Error",
-            icon: "error",
-            text: "An unknown error occurred",
+            title: "Error",
+            icon: "warning",
+            text: "You are already on the waitlist!",
             showConfirmButton: true,
             confirmButtonText: "Proceed",
             confirmButtonColor: "#3ca062",
@@ -102,7 +108,6 @@ const AppMailist = (): JSX.Element => {
         data-aos-duration="300"
         id="app_waitlist"
       >
-        {showConfetti && <Confetti />}
         <section className="award-win-section d-flex flex-column align-items-center justify-content-center">
           <AppAwardFrame className="my-2" />
           <h6 className="text-capitalize fs-6 fw-bold my-2">
@@ -126,12 +131,16 @@ const AppMailist = (): JSX.Element => {
               type="text"
               className="my-3"
               placeHolder="Enter your name"
+              aria-label="Recipient's Email"
+              aria-describedby="basic-addon-2"
+              name="username"
+              autoComplete={"false"}
             />
             <AppInput
               type="email"
               className="m-3"
               placeHolder="Enter your email"
-              aria-label="Recipient's username"
+              aria-label="Recipient's Email"
               aria-describedby="basic-addon-2"
               name="email"
               autoComplete={"false"}
